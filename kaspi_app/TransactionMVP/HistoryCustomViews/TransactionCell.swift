@@ -154,7 +154,7 @@ class TransactionCell: UITableViewCell  {
         label.backgroundColor = UIColor(red: 0.565, green: 0.565, blue: 0.565, alpha: 1)
         label.clipsToBounds = true
         label.layer.cornerRadius = 10
-        label.preferredMaxLayoutWidth = 200.0
+        label.preferredMaxLayoutWidth = 199.0
         label.textAlignment = .center
         return label
     }()
