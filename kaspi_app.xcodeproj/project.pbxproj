@@ -24,6 +24,7 @@
 		64A439952B0FE48800A6C355 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A439942B0FE48800A6C355 /* TransactionCell.swift */; };
 		64AF70562B1E691C00C775EB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AF70552B1E691C00C775EB /* UserModel.swift */; };
 		64B4C2E12B24FCD000AEF444 /* TransferData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64B4C2DF2B24FCD000AEF444 /* TransferData.xcdatamodeld */; };
+		64B4C2E42B28E63500AEF444 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4C2E32B28E63500AEF444 /* ParentViewController.swift */; };
 		64BD42DB2B063FC0004D37CA /* Chips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD42DA2B063FC0004D37CA /* Chips.swift */; };
 		64BD42DD2B0640A4004D37CA /* UIImageExtensionPhotoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD42DC2B0640A4004D37CA /* UIImageExtensionPhotoText.swift */; };
 		64BD42DF2B06412B004D37CA /* DepositView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD42DE2B06412B004D37CA /* DepositView.swift */; };
@@ -54,6 +55,7 @@
 		64A439942B0FE48800A6C355 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		64AF70552B1E691C00C775EB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		64B4C2E02B24FCD000AEF444 /* TransactionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionModel.xcdatamodel; sourceTree = "<group>"; };
+		64B4C2E32B28E63500AEF444 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		64BD42DA2B063FC0004D37CA /* Chips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chips.swift; sourceTree = "<group>"; };
 		64BD42DC2B0640A4004D37CA /* UIImageExtensionPhotoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensionPhotoText.swift; sourceTree = "<group>"; };
 		64BD42DE2B06412B004D37CA /* DepositView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				64A4398D2B0FC7BD00A6C355 /* HistoryCustomViews */,
 				64BD42D82B063F43004D37CA /* TransfeCustomViewr */,
 				64E819042B0DFA9400462730 /* Profile */,
+				64B4C2E32B28E63500AEF444 /* ParentViewController.swift */,
 			);
 			path = TransactionMVP;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				6401E7222AF90D39009BB27B /* DefaultNetworkingService.swift in Sources */,
 				64A4398F2B0FC7FF00A6C355 /* HistoryViewController.swift in Sources */,
 				64B4C2E12B24FCD000AEF444 /* TransferData.xcdatamodeld in Sources */,
+				64B4C2E42B28E63500AEF444 /* ParentViewController.swift in Sources */,
 				64BD42DB2B063FC0004D37CA /* Chips.swift in Sources */,
 				64A4398C2B0FC27400A6C355 /* TransferViewBottom.swift in Sources */,
 				647597D92B14BB650050A076 /* CalendarView.swift in Sources */,
