@@ -15,36 +15,23 @@ struct SwiftUIView: View {
         NavigationView{
             ScrollView{
                 VStack(){
-                    
                     advertisments
                     rectangleSpacer(heigth: 12.0)
                     Spacer()
                     gridBody
-                }.searchable(text: $searchText)
-                    .navigationBarTitle("", displayMode: .inline)
-                    
-                                
-                    
-            }
-            
-        }
-           
+                }
                 
-//        ,placement: .navigationBarDrawer(displayMode: .always),prompt: "Поиск по Kaspi.kz"
-        
-        
-            
-            
-        
-        
-            
-            
+            }   .navigationTitle("Kaspi")
+                .searchable(text: $searchText)
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
 let layout = [
         GridItem(.fixed(74)),
-        GridItem(.fixed(74))]
+        GridItem(.fixed(74))
+]
 
 let buttonCollection = [
     buttonInfo(text: "Kaspi QR", icon: Image("qrButton")),
@@ -63,6 +50,7 @@ struct buttonInfo:Identifiable{
     let id=UUID()
     let text:String
     let icon:Image
+//    let action: (()->Void)?=nil
 }
 
 var gridBody: some View {
@@ -105,7 +93,6 @@ var advertisments: some View{
     }
 }
 struct Ad: Identifiable {
-
     let id = UUID()
     var image:Image
     var date:String
@@ -118,27 +105,24 @@ struct AdView: View{
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(12)
-                
             Text(ad.date)
                 .font(Font.custom("Roboto", size: 12))
                 .foregroundColor(Color(red: 0.64, green: 0.64, blue: 0.64))
-                
-                
         }.frame(width: 165,height: 126)
             
             
     }
 }
-struct Seacrh: View {
-    @State private var searchText = ""
-
-    var body: some View {
-            NavigationStack {
-            }
-            .searchable(text: $searchText, prompt: "Поиск по Kaspi.kz")
-            
-    }
-}
+//struct Seacrh: View {
+//    @State private var searchText = ""
+//
+//    var body: some View {
+//            NavigationStack {
+//            }
+//            .searchable(text: $searchText, prompt: "Поиск по Kaspi.kz")
+//
+//    }
+//}
 
 
 struct SwiftUIView_Previews: PreviewProvider {
