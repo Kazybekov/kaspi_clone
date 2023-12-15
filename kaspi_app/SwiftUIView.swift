@@ -29,7 +29,7 @@ struct SwiftUIView: View {
 }
 
 let layout = [
-        GridItem(.fixed(74)),
+        GridItem(.fixed(80)),
         GridItem(.fixed(74))
 ]
 
