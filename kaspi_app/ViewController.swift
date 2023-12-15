@@ -32,10 +32,9 @@ class TabBarController: UITabBarController {
         
         let nvc3 = createNavigationCont(title: "Profile", image: UIImage(systemName: "doc.richtext"), tag: 2 , vc: ProfileViewController())
         
-        let nvc4 = createNavigationCont(title: "Profile", image: UIImage(systemName: "doc.richtext"), tag: 3 , vc: ParentViewController())
         
         
-        self.viewControllers=[nvc2,nvc,nvc3,nvc4]
+        self.viewControllers=[nvc2,nvc,nvc3]
     }
     
 
