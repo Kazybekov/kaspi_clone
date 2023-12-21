@@ -31,6 +31,9 @@ class TabBarController: UITabBarController {
         let nvc2 = createNavigationCont(title: "History", image: UIImage(systemName: "doc.richtext"), tag: 0 , vc: HistoryViewController(presenter: transactionPresenter))
         
         let nvc3 = createNavigationCont(title: "Profile", image: UIImage(systemName: "doc.richtext"), tag: 2 , vc: ProfileViewController())
+        
+        
+        
         self.viewControllers=[nvc2,nvc,nvc3]
     }
     

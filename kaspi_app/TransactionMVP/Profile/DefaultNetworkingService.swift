@@ -63,7 +63,7 @@ class DefaultNetworkingService:NetworkingService {
     private func parseJsonForImageUrl(_ json:Data)->String?{
         let decoder=JSONDecoder()
         do{
-            let parsedData = try decoder.decode(Image.self, from: json)
+            let parsedData = try decoder.decode(imageData.self, from: json)
             return parsedData.urls.regular
         }
         catch{
@@ -73,7 +73,7 @@ class DefaultNetworkingService:NetworkingService {
     }
 }
 
-struct Image:Decodable{
+struct imageData:Decodable{
     var urls:URL
     struct URL:Decodable{
          var regular:String
