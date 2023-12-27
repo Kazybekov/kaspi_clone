@@ -147,6 +147,8 @@ class TransferViewController: UIViewController{
             self.stackView.setCustomSpacing(20, after: self.contactView)
             
             self.numberField.text = ""
+            
+            self.transferViewBottom.messageTextField.text = ""
         }
         updateDepositMoney()
         rName=nil

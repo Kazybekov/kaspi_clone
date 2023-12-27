@@ -90,7 +90,7 @@ class TransferViewBottom:UIStackView {
         view.backgroundColor = .clear
         return view
     }()
-    let messageTextField: UITextField = {
+    var messageTextField: UITextField = {
         let field = UITextField()
         field.placeholder = "Сообщение получателю"
         field.translatesAutoresizingMaskIntoConstraints = false

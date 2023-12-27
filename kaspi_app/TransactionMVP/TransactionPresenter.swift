@@ -31,14 +31,16 @@ protocol HistoryProtocol{
 
 class TransactionPresenter{
     
+    let defaults = UserDefaults()
+    
     var transferItem = [TransferData]()
     
     var moc:NSManagedObjectContext!
     
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
-    var user = UserModel()
-    
+    lazy var user = UserModel(userMoney: defaults.float(forKey: "userMoney"))
+  
     init(){
         moc = appDelegate?.persistentContainer.viewContext
         loadData()
@@ -82,6 +84,7 @@ extension TransactionPresenter : TransactionProtocol{
     
     func isEnoughMoney(for needed: Float) -> Bool {
         if(user.money>=needed){
+            defaults.set(user.money-needed, forKey: "userMoney")
             user.money=user.money-needed
             return true
         }
