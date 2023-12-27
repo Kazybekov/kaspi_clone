@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController {
 //MARK: Init
     
     let defaults = UserDefaults()
-    var networkingService: NetworkingService = SecondNetworkingService()
+    var networkingService: NetworkingService = DefaultNetworkingService()
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {

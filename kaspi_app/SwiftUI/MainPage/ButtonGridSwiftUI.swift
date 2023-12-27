@@ -14,17 +14,17 @@ let layout = [
 ]
 
 let buttonCollection = [
-    buttonInfo(text: "Kaspi QR", icon: Image("qrButton")),
-    buttonInfo(text: "Магазин", icon: Image("shopButton")),
-    buttonInfo(text: "Мой Банк", icon: Image("myBankButton")),
-    buttonInfo(text: "Travel", icon: Image("travelButton")),
-    buttonInfo(text: "Платежи", icon: Image("historyButton")),
-    buttonInfo(text: "Госуслуги", icon: Image("egovButton")),
-    buttonInfo(text: "Переводы", icon: Image("transferButton")),
-    buttonInfo(text: "Объявления", icon: Image("adsButton")),
+    ButtonInfo(text: "Kaspi QR", icon: Image("qrButton")),
+    ButtonInfo(text: "Магазин", icon: Image("shopButton")),
+    ButtonInfo(text: "Мой Банк", icon: Image("myBankButton")),
+    ButtonInfo(text: "Travel", icon: Image("travelButton")),
+    ButtonInfo(text: "Платежи", icon: Image("historyButton")),
+    ButtonInfo(text: "Госуслуги", icon: Image("egovButton")),
+    ButtonInfo(text: "Переводы", icon: Image("transferButton")),
+    ButtonInfo(text: "Объявления", icon: Image("adsButton")),
 ]
 
-struct buttonInfo:Identifiable{
+struct ButtonInfo:Identifiable{
     let id=UUID()
     let text:String
     let icon:Image

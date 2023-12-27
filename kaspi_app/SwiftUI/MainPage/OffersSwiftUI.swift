@@ -43,36 +43,7 @@ struct OfferView: View{
     }
 }
 
-let offers = [Offer(title: "Рассрочка 0-0-12"),
-             Offer(title: "Kaspi Red",subTitle: "Рассрочка 0%" ),
-              Offer(title: "Кредиты",subTitle: "до 1 миллиона" ),
-               Offer(title: "Kaspi Депозит",subTitle: "Эффектиные" ),
-              Offer(title: "Кредит На Покупки",subTitle: "Кредит или рассрочка 0%" )
 
-]
 
-var kaspiOffers: some View{
-    
-    ScrollView(.horizontal,showsIndicators: false){
-        HStack(spacing:20){
-            VStack(alignment: .leading){
-                OfferView(offer: offers[0])
-                OfferView(offer: offers[2])
-                
-            }.frame(width: 230)
-            
-            VStack(alignment: .leading){
-                OfferView(offer: offers[1])
-                OfferView(offer: offers[3])
-            }.frame(width: 250)
-            
-            VStack(alignment: .trailing){
-                OfferView(offer: offers[4])
-                Spacer()
-            }.frame(width: 250)
-            
-                
-        }
-    }
-}
+
 
