@@ -13,6 +13,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabs()
+        self.tabBar.tintColor = .red
         // Do any additional setup after loading the view.
     }
     
@@ -26,15 +27,20 @@ class TabBarController: UITabBarController {
     func setupTabs(){
         
         let transactionPresenter = TransactionPresenter()
-        let nvc = createNavigationCont(title: "Transfer",image: UIImage(systemName: "doc.richtext"),tag:1,vc:TransferViewController(presenter: transactionPresenter) )
+        let vcc = UIViewController()
+        SwiftUIView().injectIn(controller: vcc)
+        vcc.view.backgroundColor = .white
+        let mainpage = createNavigationCont(title: "Главная",image: UIImage(named: "myBankButton"),tag:0,vc:vcc)
         
-        let nvc2 = createNavigationCont(title: "History", image: UIImage(systemName: "doc.richtext"), tag: 0 , vc: HistoryViewController(presenter: transactionPresenter))
+        let nvc = createNavigationCont(title: "Переводы",image: UIImage(named: "transferButton"),tag:2,vc:TransferViewController(presenter: transactionPresenter) )
         
-        let nvc3 = createNavigationCont(title: "Profile", image: UIImage(systemName: "doc.richtext"), tag: 2 , vc: ProfileViewController())
+        let nvc2 = createNavigationCont(title: "История", image: UIImage(named: "historyButton"), tag: 1 , vc: HistoryViewController(presenter: transactionPresenter))
+        
+        let nvc3 = createNavigationCont(title: "Профиль", image: UIImage(named: "myBankButton"), tag: 3 , vc: ProfileViewController())
         
         
         
-        self.viewControllers=[nvc2,nvc,nvc3]
+        self.viewControllers=[mainpage,nvc2,nvc,nvc3]
     }
     
 

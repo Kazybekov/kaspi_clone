@@ -23,6 +23,10 @@
 		64A4398F2B0FC7FF00A6C355 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4398E2B0FC7FF00A6C355 /* HistoryViewController.swift */; };
 		64A439952B0FE48800A6C355 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A439942B0FE48800A6C355 /* TransactionCell.swift */; };
 		64AF70562B1E691C00C775EB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AF70552B1E691C00C775EB /* UserModel.swift */; };
+		64B166192B31F2730002D7E5 /* AdvertismentSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B166182B31F2730002D7E5 /* AdvertismentSwiftUI.swift */; };
+		64B1661B2B321ED40002D7E5 /* OffersSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1661A2B321ED40002D7E5 /* OffersSwiftUI.swift */; };
+		64B1661D2B321F130002D7E5 /* ButtonGridSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1661C2B321F130002D7E5 /* ButtonGridSwiftUI.swift */; };
+		64B1661F2B34C7780002D7E5 /* ProductSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1661E2B34C7780002D7E5 /* ProductSwiftUI.swift */; };
 		64B4C2E12B24FCD000AEF444 /* TransferData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64B4C2DF2B24FCD000AEF444 /* TransferData.xcdatamodeld */; };
 		64B4C2E62B28F16E00AEF444 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B4C2E52B28F16E00AEF444 /* SwiftUIView.swift */; };
 		64BD42DB2B063FC0004D37CA /* Chips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD42DA2B063FC0004D37CA /* Chips.swift */; };
@@ -54,6 +58,10 @@
 		64A4398E2B0FC7FF00A6C355 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		64A439942B0FE48800A6C355 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		64AF70552B1E691C00C775EB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		64B166182B31F2730002D7E5 /* AdvertismentSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertismentSwiftUI.swift; sourceTree = "<group>"; };
+		64B1661A2B321ED40002D7E5 /* OffersSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersSwiftUI.swift; sourceTree = "<group>"; };
+		64B1661C2B321F130002D7E5 /* ButtonGridSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGridSwiftUI.swift; sourceTree = "<group>"; };
+		64B1661E2B34C7780002D7E5 /* ProductSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiftUI.swift; sourceTree = "<group>"; };
 		64B4C2E02B24FCD000AEF444 /* TransactionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransactionModel.xcdatamodel; sourceTree = "<group>"; };
 		64B4C2E52B28F16E00AEF444 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		64BD42DA2B063FC0004D37CA /* Chips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chips.swift; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 				64A290EB2AED28600024D32A /* Info.plist */,
 				64A290E62AED28600024D32A /* Assets.xcassets */,
 				64B4C2E52B28F16E00AEF444 /* SwiftUIView.swift */,
+				64B166172B31F23F0002D7E5 /* SwiftUI */,
 				64A290DF2AED28600024D32A /* SceneDelegate.swift */,
 				64A290DD2AED28600024D32A /* AppDelegate.swift */,
 				64FDF1602B20757000C6F215 /* ViewController.swift */,
@@ -132,6 +141,17 @@
 				647597DA2B14BD130050A076 /* SearchBarView.swift */,
 			);
 			path = HistoryCustomViews;
+			sourceTree = "<group>";
+		};
+		64B166172B31F23F0002D7E5 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				64B166182B31F2730002D7E5 /* AdvertismentSwiftUI.swift */,
+				64B1661A2B321ED40002D7E5 /* OffersSwiftUI.swift */,
+				64B1661C2B321F130002D7E5 /* ButtonGridSwiftUI.swift */,
+				64B1661E2B34C7780002D7E5 /* ProductSwiftUI.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		64B4C2E22B26226D00AEF444 /* Models */ = {
@@ -248,9 +268,11 @@
 				64FDF1612B20757000C6F215 /* ViewController.swift in Sources */,
 				647597DB2B14BD130050A076 /* SearchBarView.swift in Sources */,
 				64B4C2E62B28F16E00AEF444 /* SwiftUIView.swift in Sources */,
+				64B166192B31F2730002D7E5 /* AdvertismentSwiftUI.swift in Sources */,
 				64D17CAC2AFFB7AB00A3CCC5 /* TransferViewController.swift in Sources */,
 				6487F16C2B15D895008C7587 /* TransactionPresenter.swift in Sources */,
 				64A439952B0FE48800A6C355 /* TransactionCell.swift in Sources */,
+				64B1661F2B34C7780002D7E5 /* ProductSwiftUI.swift in Sources */,
 				64D17CAA2AFF7CD200A3CCC5 /* SecondNetworkingService.swift in Sources */,
 				6401E7242AF90DAF009BB27B /* LayoutViewController.swift in Sources */,
 				649AD4B12AF2712300F23E59 /* CustomTextView.swift in Sources */,
@@ -266,6 +288,8 @@
 				64BD42DD2B0640A4004D37CA /* UIImageExtensionPhotoText.swift in Sources */,
 				64A290DE2AED28600024D32A /* AppDelegate.swift in Sources */,
 				64A290E02AED28600024D32A /* SceneDelegate.swift in Sources */,
+				64B1661D2B321F130002D7E5 /* ButtonGridSwiftUI.swift in Sources */,
+				64B1661B2B321ED40002D7E5 /* OffersSwiftUI.swift in Sources */,
 				64BD42E12B064206004D37CA /* LayoutTransferViewController.swift in Sources */,
 				64BD42DF2B06412B004D37CA /* DepositView.swift in Sources */,
 				64BD42E32B064408004D37CA /* ContactPickerDelegateExtension.swift in Sources */,

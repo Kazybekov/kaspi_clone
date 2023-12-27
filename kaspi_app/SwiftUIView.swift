@@ -9,69 +9,61 @@ import SwiftUI
 //import UIKit
 
 
+
 struct SwiftUIView: View {
     @State private var searchText = ""
     var body: some View {
-        NavigationView{
+        
             ScrollView{
                 VStack(){
+                    Search()
+        
                     advertisments
                     rectangleSpacer(heigth: 12.0)
-                    Spacer()
                     gridBody
-                }
-                
-            }   .navigationTitle("Kaspi")
-                .searchable(text: $searchText)
-                .navigationBarTitleDisplayMode(.inline)
-        }
+                    rectangleSpacer(heigth: 2.0)
+                    kaspiOffers
+                    rectangleSpacer(heigth: 12.0)
+                    LastVisitedView()
+                    rectangleSpacer(heigth: 12.0)
+                    RecView()
+                }.frame(width: UIScreen.main.bounds.size.width)
+            }
+//
+//            .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always), prompt:"Поиск по Kaspi.kz")
+//            .navigationBarTitleDisplayMode(.inline)
+//            .navigationTitle("Kaspi")
     }
 }
 
-let layout = [
-        GridItem(.fixed(80)),
-        GridItem(.fixed(74))
-]
 
-let buttonCollection = [
-    buttonInfo(text: "Kaspi QR", icon: Image("qrButton")),
-    buttonInfo(text: "Магазин", icon: Image("shopButton")),
-    buttonInfo(text: "Мой Банк", icon: Image("myBankButton")),
-    buttonInfo(text: "Travel", icon: Image("travelButton")),
-    buttonInfo(text: "Платежи", icon: Image("historyButton")),
-    buttonInfo(text: "Госуслуги", icon: Image("egovButton")),
-    buttonInfo(text: "Переводы", icon: Image("transferButton")),
-    buttonInfo(text: "Объявления", icon: Image("adsButton")),
-]
 func doNothing()->Void{
     
 }
-struct buttonInfo:Identifiable{
-    let id=UUID()
-    let text:String
-    let icon:Image
-//    let action: (()->Void)?=nil
-}
 
-var gridBody: some View {
-        LazyHGrid(rows: layout, spacing: 20) {
-            ForEach(buttonCollection) { button in
-                Button(action: doNothing){
-                    VStack {
-                        button.icon
-                        Text(button.text)
-                            .font(Font.custom("Roboto", size: 14))
-                            .foregroundColor(.black)
-                        }
-                }.frame(width: 74,height: 56)
+struct Search:View{
+    var body: some View {
+        Button(action: doNothing){
+            ZStack(alignment: .leading){
+                Rectangle()
+                    .foregroundColor(Color(red: 0.95, green: 0.95, blue: 0.95))
+                    .frame(width: 354,height: 36)
+                    .cornerRadius(8)
+                HStack{
+                    Image("searchGray")
+                        .frame(width:24,height: 24)
+                    Text("Поиск по Kaspi.kz")
+                        .font(Font.system(size: 15))
+                        .foregroundColor(Color(red: 0.62, green: 0.62, blue: 0.62))
+                }.padding(.horizontal,8)
             }
         }
     }
+}
+
 
 struct rectangleSpacer:View{
-    
     var heigth:CGFloat
-    
     var body: some View {
         Rectangle()
             .frame(height: heigth)
@@ -80,53 +72,36 @@ struct rectangleSpacer:View{
     }
 }
 
-var advertisments: some View{
-    ScrollView(.horizontal,showsIndicators: false){
-        HStack(spacing: 12){
-            Spacer()
-            AdView(ad: Ad(image: Image("ad"), date: "12-13 december"))
-            AdView(ad: Ad(image: Image("ad"), date: "14-15 december"))
-            AdView(ad: Ad(image: Image("ad"), date: "12-13 december"))
-            AdView(ad: Ad(image: Image("ad"), date: "12-13 december"))
-            AdView(ad: Ad(image: Image("ad"), date: "12-13 december"))
-        }
-    }
-}
-struct Ad: Identifiable {
-    let id = UUID()
-    var image:Image
-    var date:String
-}
-struct AdView: View{
-    let ad: Ad
-    var body: some View {
-        VStack(alignment: .leading){
-            ad.image
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(12)
-            Text(ad.date)
-                .font(Font.custom("Roboto", size: 12))
-                .foregroundColor(Color(red: 0.64, green: 0.64, blue: 0.64))
-        }.frame(width: 165,height: 126)
-            
-            
-    }
-}
-//struct Seacrh: View {
-//    @State private var searchText = ""
-//
-//    var body: some View {
-//            NavigationStack {
-//            }
-//            .searchable(text: $searchText, prompt: "Поиск по Kaspi.kz")
-//
-//    }
-//}
-
-
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SwiftUIView()
     }
+}
+
+func getStringFromInt(int:Int)->String{
+    let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.maximumFractionDigits = 2
+            formatter.groupingSeparator = " "
+            let number = NSNumber(value: int)
+            let formattedValue = formatter.string(from: number)!
+    return formattedValue + " KZT"
+}
+
+extension View {
+    
+    func injectIn(controller vc: UIViewController) {
+        let controller = UIHostingController(rootView: self)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        controller.view.backgroundColor = .clear
+        vc.view.addSubview(controller.view)
+        
+        NSLayoutConstraint.activate([
+            controller.view.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor),
+            controller.view.topAnchor.constraint(equalTo: vc.view.topAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor)
+        ])
+    }
+    
 }
