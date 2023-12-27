@@ -28,7 +28,6 @@ struct ButtonInfo:Identifiable{
     let id=UUID()
     let text:String
     let icon:Image
-//    let action: (()->Void)?=nil
 }
 
 var gridBody: some View {

@@ -15,10 +15,6 @@
 import SwiftUI
 import UIKit
 
-
-//let product =  Product(image: Image("iron"),name: "Pelican Strem че...", price: 50000, category: "Утюги", bonus: "5%", credit0012: true, action: doNothing)
-
-
 struct ProductPageView: View {
     
     var product:Product
@@ -52,8 +48,3 @@ struct ProductPageView: View {
     }
     }
 }
-//struct SwiftUIView_Previews2: PreviewProvider {
-//    static var previews: some View {
-//        ProductPageView()
-//    }
-//}

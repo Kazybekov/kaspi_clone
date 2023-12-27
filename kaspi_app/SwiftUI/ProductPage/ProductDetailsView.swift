@@ -43,7 +43,7 @@ struct ProductNameView: View {
         
         VStack(alignment: .leading){
             HStack(){
-                Text("Утюг YOKE UK-999 голубой")
+                Text(product.name)
                 .font(Font.custom("Roboto", size: 18))
                 Spacer()
                 HStack(spacing:16){
