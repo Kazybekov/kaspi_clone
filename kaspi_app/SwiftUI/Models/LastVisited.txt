@@ -1,0 +1,74 @@
+[{
+  "name" : "Смартфон Apple iPhone 15 Pro",
+  "id" : 12,
+  "bonus" : "10",
+  "credit0012" : true,
+  "category" : "Смартфоны",
+  "price" : 582030,
+  "image" : "iphone"
+},
+{
+"name" : "Мышь Logitech G102 Lightsync",
+"id" : 12,
+"bonus" : "5",
+"credit0012" : false,
+"category" : "Гарнитуры",
+"price" : 20000,
+"image" : "mouse"
+},
+{
+"name" : "Наушники Apple AirPods",
+"id" : 12,
+"bonus" : "1",
+"credit0012" : true,
+"category" : "Наушники",
+"price" : 51490,
+"image" : "headPhones"
+},
+ {
+ "name" : "Утюг Белый",
+ "id" : 12,
+ "bonus" : "10",
+ "credit0012" : true,
+ "category" : "Утюги",
+ "price" : 14990,
+ "image" : "iron"
+ },
+ {
+   "name" : "Смартфон Apple iPhone 15 Pro",
+   "id" : 12,
+   "bonus" : "10",
+   "credit0012" : true,
+   "category" : "Смартфоны",
+   "price" : 582030,
+   "image" : "iphone"
+ },
+ {
+ "name" : "Мышь Logitech G102 Lightsync",
+ "id" : 12,
+ "bonus" : "5",
+ "credit0012" : false,
+ "category" : "Гарнитуры",
+ "price" : 20000,
+ "image" : "mouse"
+ },
+ {
+ "name" : "Наушники Apple AirPods",
+ "id" : 12,
+ "bonus" : "1",
+ "credit0012" : true,
+ "category" : "Наушники",
+ "price" : 51490,
+ "image" : "headPhones"
+ },
+  {
+  "name" : "Утюг Белый",
+  "id" : 12,
+  "bonus" : "10",
+  "credit0012" : true,
+  "category" : "Утюги",
+  "price" : 14990,
+  "image" : "iron"
+  }
+
+]

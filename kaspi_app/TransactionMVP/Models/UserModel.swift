@@ -13,4 +13,8 @@ struct UserModel{
     var surname:String = "Kazybekov"
     var avatar:UIImage? = nil
     var money:Float = 4123456.78
+    
+    init(userMoney: Float){
+        money = userMoney
+    }
 }

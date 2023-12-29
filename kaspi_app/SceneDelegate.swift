@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-//        let nav = UINavigationController(rootViewController: MainPageViewController())
-        window?.rootViewController = TabBarController()
+        let nav = UINavigationController(rootViewController: TabBarController())
+        nav.isNavigationBarHidden = true
+        window?.rootViewController = nav
         //let vc = UIHostingController.init(rootView: SwiftUIView())
 //        let nav = UINavigationController(rootViewController: vc)
         //window?.rootViewController = nav

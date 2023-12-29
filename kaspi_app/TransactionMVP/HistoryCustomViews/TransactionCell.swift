@@ -13,11 +13,12 @@ class TransactionCell: UITableViewCell  {
     static let identifier = "transactionCell"
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
         setupView()
     }
-    
+
     func setupCellData(data: TransferData){
         
         transferAmount.text = getStringFromFloat(float:data.money)
@@ -26,7 +27,6 @@ class TransactionCell: UITableViewCell  {
         if let message = data.message{
             messageLabel.isHidden = false
             messageLabel.text = message
-            messageLabel.widthAnchor.constraint(equalToConstant: messageLabel.intrinsicContentSize.width+30).isActive = true
         }else{
             messageLabel.isHidden = true
         }
@@ -43,7 +43,6 @@ class TransactionCell: UITableViewCell  {
         let dayOfMonth = dateFormatter.string(from: date)
         
         dateLabel.text = dayOfMonth + " " + monthString
-        
     }
     
     func getStringFromFloat(float:Float)->String{
@@ -146,7 +145,7 @@ class TransactionCell: UITableViewCell  {
     }()
     
     let messageLabel:UILabel = {
-        let label = UILabel()
+        let label = PaddingLabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -219,4 +218,24 @@ class TransactionCell: UITableViewCell  {
         ])
     }
     
+}
+
+
+class PaddingLabel: UILabel {
+    
+    @IBInspectable var topInset: CGFloat = 0.0
+    @IBInspectable var bottomInset: CGFloat = 0.0
+    @IBInspectable var leftInset: CGFloat = 15.0
+    @IBInspectable var rightInset: CGFloat = 15.0
+    
+    override func drawText(in rect: CGRect) {
+        let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        super.drawText(in: rect.inset(by: insets))
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        let size = super.intrinsicContentSize
+        return CGSize(width: size.width + leftInset + rightInset,
+                      height: size.height + topInset + bottomInset)
+    }
 }

@@ -21,13 +21,9 @@ class TransferViewBottom:UIStackView {
     
     func setupStack(){
         
-        
-        
-//        self.addArrangedSubview(cashView)
         self.addArrangedSubview(messageView)
         self.addArrangedSubview(chipsView)
         self.addArrangedSubview(comissionLabelView)
-        //self.addArrangedSubview(transferButtonView)
         
         setupChipsView()
         setupLastViews()
@@ -90,7 +86,7 @@ class TransferViewBottom:UIStackView {
         view.backgroundColor = .clear
         return view
     }()
-    let messageTextField: UITextField = {
+    var messageTextField: UITextField = {
         let field = UITextField()
         field.placeholder = "Сообщение получателю"
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -113,16 +109,12 @@ class TransferViewBottom:UIStackView {
         let view = UIStackView()
         view.axis = .horizontal
         view.distribution = .equalSpacing
-//        view.alignment = .
         view.spacing = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     func setupChipsView(){
-//        NSLayoutConstraint.activate([
-//            chipsView.leftAnchor.constraint(equalTo: messageView.leftAnchor,constant: 16),
-//            chipsView.rightAnchor.constraint(equalTo: messageView.rightAnchor,constant: -70)
-//        ])
+
         let chip = Chips("thanks!")
         chipsStackView.insertArrangedSubview(chip, at: 0)
         let chip2 = Chips("for dinner!")
@@ -132,9 +124,7 @@ class TransferViewBottom:UIStackView {
         
         chipsView.addSubview(chipsStackView)
         chipsStackView.centerXAnchor.constraint(equalTo: chipsView.centerXAnchor).isActive = true
-//        chipsStackView.leftAnchor.constraint(equalTo: chipsView.leftAnchor,constant: 16).isActive = true
-//        chipsStackView.rightAnchor.constraint(equalTo: chipsView.rightAnchor,constant: -70).isActive = true
-        
+ 
     }
     
     // MARK: last 2 views

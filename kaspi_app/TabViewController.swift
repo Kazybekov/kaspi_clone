@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 
 @available(iOS 16.0, *)
 class TabBarController: UITabBarController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +30,22 @@ class TabBarController: UITabBarController {
     func setupTabs(){
         
         let transactionPresenter = TransactionPresenter()
-        let vcc = UIViewController()
-        SwiftUIView().injectIn(controller: vcc)
-        vcc.view.backgroundColor = .white
-        let mainpage = createNavigationCont(title: "Главная",image: UIImage(named: "myBankButton"),tag:0,vc:vcc)
+        let viewModel=ProductViewModel()
         
+        var nav = UINavigationController()
+        
+        let vcc = UIHostingController(rootView: SwiftUIView(viewModel: viewModel,presentProductDetails: { product in
+            
+            let vc = UIHostingController(rootView: ProductPageView(product: product))
+            
+            nav.pushViewController(vc, animated: true)
+            
+        }))
+        
+        nav = createNavigationCont(title: "Главная",image: UIImage(named: "myBankButton"),tag:0,vc:vcc)
+        
+        nav.topViewController?.title = "Kaspi bank"
+       
         let nvc = createNavigationCont(title: "Переводы",image: UIImage(named: "transferButton"),tag:2,vc:TransferViewController(presenter: transactionPresenter) )
         
         let nvc2 = createNavigationCont(title: "История", image: UIImage(named: "historyButton"), tag: 1 , vc: HistoryViewController(presenter: transactionPresenter))
@@ -40,7 +54,7 @@ class TabBarController: UITabBarController {
         
         
         
-        self.viewControllers=[mainpage,nvc2,nvc,nvc3]
+        self.viewControllers=[nav,nvc2,nvc,nvc3]
     }
     
 
