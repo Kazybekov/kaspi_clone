@@ -247,7 +247,7 @@ extension HistoryViewController: UITableViewDataSource{
             return UITableViewCell()
         }
         if let safeData=presenter.getTransactionData(at: presenter.getTransactionDataArrayCount()-1-indexPath.row){
-            cell.setupCellData(data:safeData )
+            cell.setupCellData(data:safeData)
         }
         
         return cell

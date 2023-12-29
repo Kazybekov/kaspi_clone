@@ -148,7 +148,7 @@ class TransferViewController: UIViewController{
             
             self.numberField.text = ""
             
-            self.transferViewBottom.messageTextField.text = ""
+            self.transferViewBottom.messageTextField.text = nil
         }
         updateDepositMoney()
         rName=nil
