@@ -5,8 +5,7 @@ Profile Page
 
 
 Main Page
-<img src="![1-4](https://github.com/Kazybekov/kaspi_clone/assets/79101301/991a4fd9-3edc-44c8-a112-9aaa039cb0f7)
-" width="30%" heigth="30%">
+<img src="https://github.com/Kazybekov/kaspi_clone/assets/79101301/991a4fd9-3edc-44c8-a112-9aaa039cb0f7" width="30%" heigth="30%">
 
 
 Transaction History
